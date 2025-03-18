@@ -32,14 +32,15 @@ could all be refactored to perform tasks within workers, but concurrent access t
 """
 import functools
 import logging
-from collections import namedtuple, defaultdict
-from enum import unique, Enum
+from collections import defaultdict, namedtuple
+from enum import Enum, unique
 
 from pyomo.common.numeric_types import value
 from pyomo.core import Objective
 
 from temoa.temoa_model import temoa_rules
-from temoa.temoa_model.exchange_tech_cost_ledger import ExchangeTechCostLedger, CostType
+from temoa.temoa_model.exchange_tech_cost_ledger import (
+    CostType, ExchangeTechCostLedger)
 from temoa.temoa_model.temoa_model import TemoaModel
 
 logger = logging.getLogger(__name__)

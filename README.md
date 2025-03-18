@@ -47,7 +47,7 @@ help set up and associate this venv with the project.  It is also possible from 
 ```
 (venv) $ pip install -r requirements.txt
 ```
-- For Conda users, an environment.yml file is provided that is not currently fully tested.  Additional installs may 
+- For Conda users, an environment.yml file is provided that is not currently fully tested.  Additional installs may
 be required.
 3. The entry point for regular execution is now at the top level of the project so a "sample" run should be initiated as:
 
@@ -56,8 +56,8 @@ be required.
 ```
 
 ## Database Setup
-- Several sample database files in Version 3 format are provided in SQL format for learning/testing.  These are provided in the 
-`data_files/example_dbs` folder.  In order to use them, they must be converted into sqlite database files.  This can 
+- Several sample database files in Version 3 format are provided in SQL format for learning/testing.  These are provided in the
+`data_files/example_dbs` folder.  In order to use them, they must be converted into sqlite database files.  This can
 be done from the command line using the sqlite3 engine to convert them.  sqlite3 is packaged with Python and should be
 available.  If not, most configuration managers should be able to install it.  The command to make the `.sqlite` file
 is (for Utopia as an example):
@@ -65,9 +65,9 @@ is (for Utopia as an example):
 (venv) $ sqlite3 utopia.sqlite < utopia.sql
 ```
 - Converting legacy db's to Version 3 can be done with the included database migration tool.  Users who use this
-tool are advised to carefully review the console outputs during conversion to ensure accuracy and check the 
+tool are advised to carefully review the console outputs during conversion to ensure accuracy and check the
 converted database carefully.  The migration tool will build an empty new Version 3 database and move data from
-the old database, preserving the legacy database in place.  The command can be run from the top level of the 
+the old database, preserving the legacy database in place.  The command can be run from the top level of the
 project and needs pointers to the target database and the Version 3 schema file.  A typical execution from top level
 should look like:
 
@@ -132,7 +132,7 @@ products is possible.  To see available options invoke the `main.py` file with t
 ```
 
 ## Typical Run
-1. Prepare a database (or copy of one) as described above.  Runs will fill the output tables and overwrite any data with the 
+1. Prepare a database (or copy of one) as described above.  Runs will fill the output tables and overwrite any data with the
 same scenario name.
 2. Perepare a config file with paths to the database(s) relative to the top of the project, as in the example
 3. Run the model, using the `main.py` entry point from the top-level of the project:
@@ -140,7 +140,7 @@ same scenario name.
 (venv) temoa $ python main.py --config data_files/my_configs/config_sample.toml
 ```
 4. Review the config display and accept
-5. Review the log file and output products which are automatically placed in a time-stamped folder in `output_files`, 
+5. Review the log file and output products which are automatically placed in a time-stamped folder in `output_files`,
 unless user has redirected output
 6. Review the data in the Output tables
 
@@ -165,7 +165,7 @@ The full Temoa documentation can be built by following the build README file in 
 
 ## Hot Fix for Network Plots on Windows Machines
 
-Users wishing to utilize the feature to make the html network plots of the energy network using the 
+Users wishing to utilize the feature to make the html network plots of the energy network using the
 `plot_commodity_network` option in the config file who are working on Windows Operating System may need to make a
 "hot fix" to the library code.  See note here:  https://github.com/robert-haas/gravis/issues/10
 

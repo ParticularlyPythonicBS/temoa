@@ -30,7 +30,7 @@ separately gather all of the costs and then use a usage ratio to generate entrie
 
 """
 from collections import defaultdict
-from enum import unique, Enum
+from enum import Enum, unique
 from typing import Union
 
 from pyomo.common.numeric_types import value

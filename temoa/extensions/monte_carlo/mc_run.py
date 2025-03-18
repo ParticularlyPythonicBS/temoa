@@ -25,7 +25,7 @@ https://westernspark.us
 Created on:  11/9/24
 
 """
-from collections import namedtuple, defaultdict
+from collections import defaultdict, namedtuple
 from collections.abc import Generator
 from itertools import product
 from logging import getLogger

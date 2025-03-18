@@ -4,10 +4,13 @@ import sys
 import matplotlib
 
 matplotlib.use('Agg')
-from matplotlib import pyplot as plt, cm as cmx, colors
-import random
-import os
 import argparse
+import os
+import random
+
+from matplotlib import cm as cmx
+from matplotlib import colors
+from matplotlib import pyplot as plt
 
 
 class OutputPlotGenerator:

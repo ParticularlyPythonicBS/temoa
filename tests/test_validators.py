@@ -30,12 +30,10 @@ received this license file.  If not, see <http://www.gnu.org/licenses/>.
 import pyomo.environ as pyo
 import pytest
 
-from temoa.temoa_model.model_checking.validators import (
-    linked_region_check,
-    region_check,
-    region_group_check,
-    no_slash_or_pipe,
-)
+from temoa.temoa_model.model_checking.validators import (linked_region_check,
+                                                         no_slash_or_pipe,
+                                                         region_check,
+                                                         region_group_check)
 
 
 def test_region_check():

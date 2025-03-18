@@ -23,14 +23,12 @@ from logging import getLogger
 from sys import stderr as SE
 from typing import TYPE_CHECKING, Iterable
 
-from pyomo.core import Var, Expression
+from pyomo.core import Expression, Var
 from pyomo.environ import Constraint, value
 
 from temoa.temoa_model.temoa_initialize import (
-    DemandConstraintErrorCheck,
     CommodityBalanceConstraintErrorCheck,
-    CommodityBalanceConstraintErrorCheckAnnual,
-)
+    CommodityBalanceConstraintErrorCheckAnnual, DemandConstraintErrorCheck)
 
 if TYPE_CHECKING:
     from temoa.temoa_model.temoa_model import TemoaModel

@@ -9,7 +9,8 @@ from typing import Iterable
 import gravis as gv
 import networkx as nx
 
-from temoa.temoa_model.model_checking.network_model_data import NetworkModelData, Tech
+from temoa.temoa_model.model_checking.network_model_data import (
+    NetworkModelData, Tech)
 from temoa.temoa_model.temoa_config import TemoaConfig
 
 """

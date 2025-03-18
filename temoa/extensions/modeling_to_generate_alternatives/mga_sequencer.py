@@ -42,10 +42,13 @@ from pyomo.contrib.solver.results import Results
 from pyomo.dataportal import DataPortal
 from pyomo.opt import check_optimal_termination
 
-from definitions import get_OUTPUT_PATH, PROJECT_ROOT
-from temoa.extensions.modeling_to_generate_alternatives.manager_factory import get_manager
-from temoa.extensions.modeling_to_generate_alternatives.mga_constants import MgaAxis, MgaWeighting
-from temoa.extensions.modeling_to_generate_alternatives.vector_manager import VectorManager
+from definitions import PROJECT_ROOT, get_OUTPUT_PATH
+from temoa.extensions.modeling_to_generate_alternatives.manager_factory import \
+    get_manager
+from temoa.extensions.modeling_to_generate_alternatives.mga_constants import (
+    MgaAxis, MgaWeighting)
+from temoa.extensions.modeling_to_generate_alternatives.vector_manager import \
+    VectorManager
 from temoa.extensions.modeling_to_generate_alternatives.worker import Worker
 from temoa.temoa_model.hybrid_loader import HybridLoader
 from temoa.temoa_model.model_checking.pricing_check import price_checker

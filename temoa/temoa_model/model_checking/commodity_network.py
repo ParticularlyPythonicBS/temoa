@@ -30,7 +30,8 @@ from collections import defaultdict
 from itertools import chain
 from logging import getLogger
 
-from temoa.temoa_model.model_checking.network_model_data import NetworkModelData, Tech
+from temoa.temoa_model.model_checking.network_model_data import (
+    NetworkModelData, Tech)
 
 logger = getLogger(__name__)
 

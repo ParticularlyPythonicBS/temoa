@@ -30,20 +30,14 @@ import sqlite3
 import sys
 from logging import getLogger
 from pathlib import Path
-from sys import stderr as SE, version_info
+from sys import stderr as SE
+from sys import version_info
 from time import time
 from typing import Tuple
 
-from pyomo.environ import (
-    DataPortal,
-    Suffix,
-    Var,
-    Constraint,
-    value,
-    UnknownSolver,
-    SolverFactory,
-    check_optimal_termination,
-)
+from pyomo.environ import (Constraint, DataPortal, SolverFactory, Suffix,
+                           UnknownSolver, Var, check_optimal_termination,
+                           value)
 from pyomo.opt import SolverResults
 
 from temoa.data_processing.DB_to_Excel import make_excel

@@ -23,25 +23,12 @@ received this license file.  If not, see <http://www.gnu.org/licenses/>.
 import logging
 
 from pyomo.core import BuildCheck
-from pyomo.environ import (
-    Any,
-    NonNegativeReals,
-    AbstractModel,
-    BuildAction,
-    Param,
-    Objective,
-    minimize,
-)
+from pyomo.environ import (AbstractModel, Any, BuildAction, NonNegativeReals,
+                           Objective, Param, minimize)
 
 from temoa.temoa_model.model_checking.validators import (
-    validate_linked_tech,
-    region_check,
-    validate_CapacityFactorProcess,
-    region_group_check,
-    validate_Efficiency,
-    check_flex_curtail,
-    no_slash_or_pipe,
-)
+    check_flex_curtail, no_slash_or_pipe, region_check, region_group_check,
+    validate_CapacityFactorProcess, validate_Efficiency, validate_linked_tech)
 from temoa.temoa_model.temoa_initialize import *
 from temoa.temoa_model.temoa_initialize import get_loan_life
 from temoa.temoa_model.temoa_rules import *

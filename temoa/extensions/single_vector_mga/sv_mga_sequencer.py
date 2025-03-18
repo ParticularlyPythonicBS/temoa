@@ -33,14 +33,15 @@ import sqlite3
 import sys
 from collections.abc import Iterable
 
-from pyomo.core import value, Constraint, Expression, Objective
+from pyomo.core import Constraint, Expression, Objective, value
 from pyomo.dataportal import DataPortal
 from pyomo.opt import check_optimal_termination
 
 from temoa.extensions.single_vector_mga.output_summary import summarize
 from temoa.temoa_model.hybrid_loader import HybridLoader
 from temoa.temoa_model.model_checking.pricing_check import price_checker
-from temoa.temoa_model.run_actions import build_instance, solve_instance, handle_results, save_lp
+from temoa.temoa_model.run_actions import (build_instance, handle_results,
+                                           save_lp, solve_instance)
 from temoa.temoa_model.table_writer import TableWriter
 from temoa.temoa_model.temoa_config import TemoaConfig
 from temoa.temoa_model.temoa_model import TemoaModel

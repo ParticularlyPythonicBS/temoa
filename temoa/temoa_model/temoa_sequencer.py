@@ -37,29 +37,23 @@ from pathlib import Path
 import pyomo.opt
 
 from temoa.extensions.method_of_morris.morris_sequencer import MorrisSequencer
-from temoa.extensions.modeling_to_generate_alternatives.mga_sequencer import MgaSequencer
+from temoa.extensions.modeling_to_generate_alternatives.mga_sequencer import \
+    MgaSequencer
 from temoa.extensions.monte_carlo.mc_sequencer import MCSequencer
 from temoa.extensions.myopic.myopic_sequencer import MyopicSequencer
 from temoa.extensions.single_vector_mga.sv_mga_sequencer import SvMgaSequencer
 from temoa.temoa_model.hybrid_loader import HybridLoader
 from temoa.temoa_model.model_checking.pricing_check import price_checker
-from temoa.temoa_model.run_actions import (
-    build_instance,
-    solve_instance,
-    handle_results,
-    check_solve_status,
-    check_python_version,
-    check_database_version,
-)
+from temoa.temoa_model.run_actions import (build_instance,
+                                           check_database_version,
+                                           check_python_version,
+                                           check_solve_status, handle_results,
+                                           solve_instance)
 from temoa.temoa_model.temoa_config import TemoaConfig
 from temoa.temoa_model.temoa_mode import TemoaMode
 from temoa.temoa_model.temoa_model import TemoaModel
-from temoa.version_information import (
-    DB_MAJOR_VERSION,
-    MIN_DB_MINOR_VERSION,
-    MIN_PYTHON_MAJOR,
-    MIN_PYTHON_MINOR,
-)
+from temoa.version_information import (DB_MAJOR_VERSION, MIN_DB_MINOR_VERSION,
+                                       MIN_PYTHON_MAJOR, MIN_PYTHON_MINOR)
 
 logger = getLogger(__name__)
 

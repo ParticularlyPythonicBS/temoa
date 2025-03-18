@@ -19,7 +19,8 @@ in LICENSE.txt.  Users uncompressing this from an archive may not have
 received this license file.  If not, see <http://www.gnu.org/licenses/>.
 """
 from collections import defaultdict
-from itertools import product as cross_product, product
+from itertools import product
+from itertools import product as cross_product
 from operator import itemgetter as iget
 from sys import stderr as SE
 from typing import TYPE_CHECKING
@@ -31,10 +32,9 @@ if TYPE_CHECKING:
     from temoa.temoa_model.temoa_model import TemoaModel
 
 from io import StringIO
+from logging import getLogger
 
 from pyomo.environ import value
-
-from logging import getLogger
 
 logger = getLogger(__name__)
 
