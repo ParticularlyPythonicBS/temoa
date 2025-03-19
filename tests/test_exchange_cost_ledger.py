@@ -28,7 +28,8 @@ Created on:  3/3/24
 
 import pytest
 
-from temoa.temoa_model.exchange_tech_cost_ledger import CostType, ExchangeTechCostLedger
+from temoa.temoa_model.exchange_tech_cost_ledger import (
+    CostType, ExchangeTechCostLedger)
 from tests.utilities.namespace_mock import Namespace
 
 # these are the necessary Temoa elements to make the ledger work

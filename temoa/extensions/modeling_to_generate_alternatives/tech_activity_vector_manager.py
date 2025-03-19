@@ -36,12 +36,14 @@ from typing import Iterable
 
 import numpy as np
 from matplotlib import pyplot as plt
-from pyomo.core import Expression, Var, value, Objective, quicksum
+from pyomo.core import Expression, Objective, Var, quicksum, value
 
 from definitions import get_OUTPUT_PATH
 from temoa.extensions.modeling_to_generate_alternatives.hull import Hull
-from temoa.extensions.modeling_to_generate_alternatives.mga_constants import MgaWeighting
-from temoa.extensions.modeling_to_generate_alternatives.vector_manager import VectorManager
+from temoa.extensions.modeling_to_generate_alternatives.mga_constants import \
+    MgaWeighting
+from temoa.extensions.modeling_to_generate_alternatives.vector_manager import \
+    VectorManager
 from temoa.temoa_model.temoa_model import TemoaModel
 
 logger = getLogger(__name__)

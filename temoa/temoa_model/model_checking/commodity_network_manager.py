@@ -37,7 +37,8 @@ from typing import Iterable
 from temoa.temoa_model.model_checking.commodity_graph import generate_graph
 from temoa.temoa_model.model_checking.commodity_network import CommodityNetwork
 from temoa.temoa_model.model_checking.element_checker import ViableSet
-from temoa.temoa_model.model_checking.network_model_data import NetworkModelData, Tech
+from temoa.temoa_model.model_checking.network_model_data import (
+    NetworkModelData, Tech)
 from temoa.temoa_model.temoa_config import TemoaConfig
 
 logger = getLogger(__name__)

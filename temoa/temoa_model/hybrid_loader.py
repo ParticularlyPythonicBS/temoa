@@ -41,8 +41,10 @@ from pyomo.core import Param, Set
 from pyomo.dataportal import DataPortal
 
 from temoa.extensions.myopic.myopic_index import MyopicIndex
-from temoa.temoa_model.model_checking import network_model_data, element_checker
-from temoa.temoa_model.model_checking.commodity_network_manager import CommodityNetworkManager
+from temoa.temoa_model.model_checking import (element_checker,
+                                              network_model_data)
+from temoa.temoa_model.model_checking.commodity_network_manager import \
+    CommodityNetworkManager
 from temoa.temoa_model.model_checking.element_checker import ViableSet
 from temoa.temoa_model.temoa_config import TemoaConfig
 from temoa.temoa_model.temoa_mode import TemoaMode

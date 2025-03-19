@@ -3,13 +3,10 @@ import sys
 from subprocess import call
 
 from DatabaseUtil import DatabaseUtil
-from GraphVizFormats import (
-    results_dot_fmt,
-    tech_results_dot_fmt,
-    commodity_dot_fmt,
-    quick_run_dot_fmt,
-)
-from GraphVizUtil import create_text_nodes, create_text_edges, getColorConfig, processInput
+from GraphVizFormats import (commodity_dot_fmt, quick_run_dot_fmt,
+                             results_dot_fmt, tech_results_dot_fmt)
+from GraphVizUtil import (create_text_edges, create_text_nodes, getColorConfig,
+                          processInput)
 
 
 class GraphvizDiagramGenerator(object):

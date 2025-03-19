@@ -27,9 +27,8 @@ Created on:  4/16/24
 """
 import pytest
 
-from temoa.extensions.modeling_to_generate_alternatives.tech_activity_vector_manager import (
-    TechActivityVectorManager,
-)
+from temoa.extensions.modeling_to_generate_alternatives.tech_activity_vector_manager import \
+    TechActivityVectorManager
 
 
 def test__vector_engine():

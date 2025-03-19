@@ -1,7 +1,7 @@
 #!/usr/bin/env pyomo_python
 
 """
-Tools for Energy Model Optimization and Analysis (Temoa): 
+Tools for Energy Model Optimization and Analysis (Temoa):
 An open source framework for energy systems optimization modeling
 
 Copyright (C) 2015,  NC State University
@@ -16,8 +16,8 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-A complete copy of the GNU General Public License v2 (GPLv2) is available 
-in LICENSE.txt.  Users uncompressing this from an archive may not have 
+A complete copy of the GNU General Public License v2 (GPLv2) is available
+in LICENSE.txt.  Users uncompressing this from an archive may not have
 received this license file.  If not, see <http://www.gnu.org/licenses/>.
 """
 
@@ -25,9 +25,10 @@ import os
 import sys
 from io import StringIO
 from pprint import pformat
-from shutil import copy as copyfile, rmtree
+from shutil import copy as copyfile
+from shutil import rmtree
 
-from pyomo.core.base.sets import _SetProduct, _SetContainer
+from pyomo.core.base.sets import _SetContainer, _SetProduct
 
 SE = sys.stderr
 instance = None

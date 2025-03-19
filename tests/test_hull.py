@@ -38,7 +38,7 @@ r"""
        |___\
          |
          v
-A simple right triangle to start with 
+A simple right triangle to start with
 - should have 3 norms from 3 equations as a starter
 """
 
