@@ -8,6 +8,7 @@
 !data_files/
 !notebooks/
 !output_files/
+!.github/
 
 # unignore files
 !.gitignore
