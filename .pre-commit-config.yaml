@@ -1,0 +1,42 @@
+repos:
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.7.6
+    hooks:
+    # Dependency management
+      - id: uv-lock
+      # Compile requirements
+      - id: pip-compile
+        name: pip-compile requirements.in
+        args: [requirements.in, -o, requirements.txt]
+      - id: pip-compile
+        name: pip-compile requirements-dev.in
+        args: [requirements-dev.in, -o, requirements-dev.txt]
+        files: ^requirements-dev\.(in|txt)$
+    # Code quality and formatting
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: debug-statements
+    # Python Linting & Formatting with Ruff
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: "v0.11.10"
+    hooks:
+      - id: ruff
+        name: ruff (linter)
+        args: [--fix, --exit-non-zero-on-fix]
+        # --fix: attempts to automatically fix linting issues.
+        # --exit-non-zero-on-fix: ensures that if fixes were made,
+        #                         the commit fails, prompting you to
+        #                         review and re-stage the changes.
+      - id: ruff-format
+        name: ruff-format (formatter)
